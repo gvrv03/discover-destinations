@@ -95,3 +95,7 @@ app.post("/register", async (req, res) => {
     });
   }
 });
+
+app.get("/", async (req, res) => {
+  return res.json("Welcome to my API routes");
+});
