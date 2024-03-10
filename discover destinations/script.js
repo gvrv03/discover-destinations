@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const sub = document.getElementById("subject").value;
     const msg = document.getElementById("message").value;
     try {
-      const res = await fetch(baseURL + "/contact", {
+      const res = await fetch(baseURL + "/api/Contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     try {
-      const res = await fetch(baseURL + "/register", {
+      const res = await fetch(baseURL + "/api/Register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -84,6 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Optionally, you can display an alert or perform other actions
         return alert("Form Submitted Successfully");
       }
+
+      submitBtn.value = "Submit";
+
     } catch (error) {
       console.error(error);
       // Update submit button text to original state
